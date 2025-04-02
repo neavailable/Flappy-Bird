@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.6020287, y: 3.4129345, z: -0.02209181}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,6 @@ MonoBehaviour:
   _windowOfLoosePrefab: {fileID: 6077861354340254614, guid: 624b452dccda45d4baefc0c71005cdef, type: 3}
   _windowOfLooseShower: {fileID: 80534097122166965, guid: 594feca34414fd04d94e254541e09398, type: 3}
   _currentScorePrefab: {fileID: 4112393636253353431, guid: dc560f3affaf9c845871ff9e3d8993fd, type: 3}
-  _bestScoreCounterPrefab: {fileID: 6180065950715528445, guid: 322ef32482cabb54daf88d100e999f11, type: 3}
   _eventSystemPrefab: {fileID: 1971773640743042507, guid: 300d9a3d2f645e34cb0c8e8c84fed1c0, type: 3}
   _sceneLoader: {fileID: 0}
 --- !u!114 &8757629149999047530
@@ -78,3 +77,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbeaee6469a9ce248b1b5fb8334fabea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bestScoreCounter: {fileID: 0}
