@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace MainScene.UI
 {
@@ -14,6 +13,12 @@ namespace MainScene.UI
         private bool _shouldShowStore;
 
 
+        public void Constructor(GameObject store)
+        {
+            _store = store;
+        }
+        
+        
         private void Start()
         {
             _shouldShowStore = false;

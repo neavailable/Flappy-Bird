@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace MainScene.Pipe
 {
     [RequireComponent(typeof(PipesFactory))]

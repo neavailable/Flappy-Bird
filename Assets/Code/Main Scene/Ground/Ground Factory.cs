@@ -1,6 +1,6 @@
-using UnityEngine;
 using System;
 using MainScene.Object;
+using UnityEngine;
 
 namespace MainScene.Ground
 {
@@ -10,10 +10,18 @@ namespace MainScene.Ground
         public Func<Vector2> LocateGround;
 
         [SerializeField] private GameObject _groundPrefab;
+        // ---- 
         [SerializeField] private Bird.BirdDying _birdDying;
+        // ---- 
         private GroundCreatorCollider _groundCreatorCollider;
 
+        
+        public void Constructor(Bird.BirdDying birdDying)
+        {
+            _birdDying = birdDying;
+        }
 
+        
         private void OnEnable()
         {
             _groundCreatorCollider = GetComponent<GroundCreatorCollider>();

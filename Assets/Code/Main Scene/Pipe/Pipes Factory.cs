@@ -1,4 +1,3 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
 using MainScene.Bird;
@@ -6,6 +5,7 @@ using MainScene.Object;
 using MainScene.Object.SkinsManager;
 using MainScene.ThroughPipe;
 using MainScene.UI;
+using UnityEngine;
 
 namespace MainScene.Pipe
 {
@@ -21,17 +21,21 @@ namespace MainScene.Pipe
         [SerializeField] private GameObject _pipeWithEffect, _pipeWithCollider;
         [Header("Top Pipe Prefab")]
         [SerializeField] private GameObject _topPipe, _throughPipeEffectPrefab;
+        // -----
         [SerializeField] private BirdDying _birdDying;
-        [SerializeField] private Store.Store _store;
         [SerializeField] private Scores _scores;
+        // -----
         private AllPipesSkinsManager _allPipesSkinsManager;
         [Range(5, 15), SerializeField] private int _pipeNumberWithEffect;
         private List<ObjectCollider> _pipesColliders;
         private int _currentNumberOfPipes;
 
-        
-        private void Start()
+
+        public void Constructor(BirdDying birdDying, Scores scores)
         {
+            _birdDying = birdDying;
+            _scores    = scores;
+            
             _allPipesSkinsManager = GetComponent<AllPipesSkinsManager>();
             _pipesColliders = new List<ObjectCollider>();
             _currentNumberOfPipes = 1;

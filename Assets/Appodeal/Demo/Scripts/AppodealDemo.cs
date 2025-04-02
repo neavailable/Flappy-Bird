@@ -4,6 +4,7 @@ using AppodealAds.Unity.Api;
 using AppodealAds.Unity.Common;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
 namespace AppodealAds.Demo.Scripts
 {

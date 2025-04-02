@@ -1,7 +1,7 @@
 using TMPro;
-using UnityEngine;
 using MainScene.UI;
 using System;
+using UnityEngine;
 
 namespace MainScene.WindowOfLoose
 {
@@ -11,11 +11,13 @@ namespace MainScene.WindowOfLoose
         [SerializeField] private Scores _scores;
         private const string _defaultText = "Score\n";
         private TMP_Text _text;
-        
 
-        private void Awake()
+
+        public void Constructor(Scores scores)
         {
             _text = GetComponent<TMP_Text>();
+
+            _scores = scores;
             
             _scores.SendCurrentScoreAction += SetScore;
         }

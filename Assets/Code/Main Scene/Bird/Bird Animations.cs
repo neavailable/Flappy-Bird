@@ -1,7 +1,7 @@
-using UnityEngine;
 using MainScene.UserInput;
 using MainScene.Object.SkinsManager;
 using UnityEditor.Animations;
+using UnityEngine;
 
 namespace MainScene.Bird
 {

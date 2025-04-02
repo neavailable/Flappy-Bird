@@ -1,7 +1,7 @@
 using MainScene.Item;
 using System.Collections.Generic;
-using UnityEngine;
 using MainScene.Pipe;
+using UnityEngine;
 
 namespace MainScene.Object.SkinsManager
 {
@@ -11,7 +11,16 @@ namespace MainScene.Object.SkinsManager
         private List<PipeSkinsManager> _pipeSkinsManagers;
         private List<DestroyPipe> _destroyPipes;
         private Skin _currentSkin;
-        
+
+
+        public void Constructor(Store.Store store)
+        {
+            _store = store;
+            _store.BuyItem += ChangeCurrentSkin;
+            
+            _pipeSkinsManagers = new List<PipeSkinsManager>();
+            _destroyPipes      = new List<DestroyPipe>();
+        }
         
         public void AddPipeSkinsManager
         (
@@ -40,17 +49,6 @@ namespace MainScene.Object.SkinsManager
             _pipeSkinsManagers.Remove(pipeSkinsManager);
         }
         
-        private void OnEnable()
-        {
-            _store.BuyItem += ChangeCurrentSkin;
-        }
-
-        private void Start()
-        {
-            _pipeSkinsManagers = new List<PipeSkinsManager>();
-            _destroyPipes      = new List<DestroyPipe>();
-        }
-        
         private bool ChangeCurrentSkin(Skin skin)
         {
             if (_pipeSkinsManagers.Count > 0 && !_pipeSkinsManagers[0].CanChangeSkin(skin)) return false;
@@ -64,17 +62,14 @@ namespace MainScene.Object.SkinsManager
             
             return true;
         }
-
-        private void OnDisable()
-        {
-            _store.BuyItem -= ChangeCurrentSkin;
-        }
-
+        
         private void OnDestroy()
         {
+            _store.BuyItem -= ChangeCurrentSkin;
+
             foreach (var destroyPipe in _destroyPipes)
             {
-                if (destroyPipe)
+                if (destroyPipe != null)
                 {
                     destroyPipe.SelfDestroyAction -= RemovePipe;
                 }

@@ -115,8 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minGapBetweenPipes: 9.5
   _maxGapBetweenPipes: 11
-  _lowestStartPoint: {fileID: 0}
-  _highestStartPoint: {fileID: 0}
+  _lowestStartPoint: {fileID: 8836752021506699758, guid: 8e69be2e7bd372e47a5f9d5a90349729, type: 3}
+  _highestStartPoint: {fileID: 7321494962599727780, guid: 303e1597c739266428adb5f03d0b3461, type: 3}
 --- !u!114 &6736378265391691078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23a5d111bf183a4f8d42f82094a2491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _store: {fileID: 0}

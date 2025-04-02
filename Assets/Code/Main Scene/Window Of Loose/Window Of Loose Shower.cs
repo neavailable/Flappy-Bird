@@ -12,9 +12,18 @@ namespace MainScene.WindowOfLoose
         [SerializeField] private GameObject _windowOfLoose;
         [SerializeField] private List<GameObject> _objectsToHide;
 
-        
-        private void Awake()
+
+        public void Constructor
+        (
+            Bird.BirdDying birdDying,
+            GameObject windowOfLoose,
+            List<GameObject> objectsToHide
+        )
         {
+            _birdDying = birdDying;
+            _windowOfLoose = windowOfLoose;
+            _objectsToHide = objectsToHide;
+            
             _birdDying.SelfDestroy += ShowWindowOfLoose;
         }
 

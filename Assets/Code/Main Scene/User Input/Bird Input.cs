@@ -1,6 +1,6 @@
 using System;
-using UnityEngine;
 using MainScene.Bird;
+using UnityEngine;
 
 namespace MainScene.UserInput
 {

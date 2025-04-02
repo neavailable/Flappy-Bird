@@ -1,7 +1,7 @@
 using AppodealAds.Unity.Api;
 using AppodealAds.Unity.Common;
 using UnityEngine;
-    
+
 namespace MainScene.AdSettings
 {
     public class InterstitialAd : MonoBehaviour, IInterstitialAdListener

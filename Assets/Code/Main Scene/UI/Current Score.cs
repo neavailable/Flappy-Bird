@@ -8,22 +8,24 @@ namespace MainScene.UI
         public Action ChangeAllScores;
         public int CurentScore => _curentScore;
         
+        // -----
         [SerializeField] private Store.Store _store;
         [SerializeField] private Scores _scores;
+        // -----
         private int _curentScore;
 
 
-        private void Awake()
+        public void Constructor(Store.Store store, Scores scores)
         {
+            _store = store;
+            _scores = scores;
+            
             _scores.AddPoint       += AddPoint;
             _store .SubtractPoints += SubtractAllScores;
+            _curentScore = 0;
+
         }
         
-        private void Start()
-        {
-            _curentScore = 0;
-        }
-
         private void AddPoint()
         {
             ++_curentScore;

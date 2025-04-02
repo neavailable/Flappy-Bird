@@ -11,7 +11,13 @@ namespace MainScene.Object.SkinsManager
         public Action<AnimatorController> ChangeAnimatorController;
         
         [SerializeField] private Store.Store _store;
-        
+
+
+        public void Constructor(Store.Store store)
+        {
+            _store = store;
+            _store.BuyItem += ChangeSkin;
+        }
         
         public override bool ChangeSkin(Skin skin)
         {
@@ -29,12 +35,7 @@ namespace MainScene.Object.SkinsManager
             return skin is IBirdSkin;
         }
         
-        private void OnEnable()
-        {
-            _store.BuyItem += ChangeSkin;
-        }
-        
-        private void OnDisable()
+        private void OnDestroy()
         {
             _store.BuyItem -= ChangeSkin;
         }

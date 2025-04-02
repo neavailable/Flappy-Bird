@@ -1,6 +1,6 @@
-using UnityEngine;
 using MainScene.Bird;
 using System;
+using UnityEngine;
 
 namespace MainScene.Ground
 {

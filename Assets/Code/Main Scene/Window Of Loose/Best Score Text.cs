@@ -8,15 +8,16 @@ namespace MainScene.WindowOfLoose
     {
         private Counters.BestScoreCounter _bestScoreCounter;
         private const string _defaultText = "Best Score\n";
-        private TMP_Text _text; 
+        private TMP_Text _text;
 
-        private void Awake()
+
+        public void Constructor(Counters.BestScoreCounter bestScoreCounter)
         {
             _text = GetComponent<TMP_Text>();
 
             const int startScore = 0;
             _text.text = _defaultText + startScore;
-            _bestScoreCounter = FindObjectOfType<Counters.BestScoreCounter>();
+            _bestScoreCounter = bestScoreCounter;
             _bestScoreCounter.SendBestScore += SetBestScore;
         }
         

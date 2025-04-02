@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 4422068727853820113}
   - component: {fileID: 3611071064981300195}
   - component: {fileID: 1853107908362857876}
-  - component: {fileID: 2020774047844980405}
+  - component: {fileID: 2299527811094279590}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -390,9 +390,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2020774047844980405}
-        m_TargetAssemblyTypeName: Scenes.SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 2299527811094279590}
+        m_TargetAssemblyTypeName: Scenes.MainSceneButton, Assembly-CSharp
+        m_MethodName: GoToMainScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -402,7 +402,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2020774047844980405
+--- !u!114 &2299527811094279590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,10 +411,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3339278798450252637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab61cb0957bc75478dd4bafd97e8b3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bad6ce942670d24eb7c4e57a9ec2832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scenes: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
 --- !u!1 &5366241831675798484
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cf2d6bbf481274e930b00c52ea67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bestScoreCounter: {fileID: 0}
 --- !u!1 &7456269928598224221
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +816,7 @@ GameObject:
   - component: {fileID: 1334673918855941379}
   - component: {fileID: 7041978350787724426}
   - component: {fileID: 4448951055081193672}
-  - component: {fileID: 721661406928267275}
+  - component: {fileID: 5104337095931455351}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -928,9 +926,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 721661406928267275}
-        m_TargetAssemblyTypeName: Scenes.SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 5104337095931455351}
+        m_TargetAssemblyTypeName: Scenes.UISceneButton, Assembly-CSharp
+        m_MethodName: GoToUIScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -940,7 +938,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &721661406928267275
+--- !u!114 &5104337095931455351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -949,10 +947,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7456269928598224221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab61cb0957bc75478dd4bafd97e8b3c, type: 3}
+  m_Script: {fileID: 11500000, guid: ed1191719a42b7a4f9a5c5204fb351bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scenes: {fileID: 102900000, guid: 8c742634260d49247aef040c4cc5ac23, type: 3}
 --- !u!1 &7551989959909507072
 GameObject:
   m_ObjectHideFlags: 0

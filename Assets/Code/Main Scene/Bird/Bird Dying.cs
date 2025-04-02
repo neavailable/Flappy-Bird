@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 namespace MainScene.Bird
 {
@@ -11,8 +11,9 @@ namespace MainScene.Bird
         private bool _startDyingAnimation;
 
 
-        private void OnEnable()
+        public void Constructor(Ground.BirdDestroyer bottomBorder)
         {
+            _bottomBorder = bottomBorder;
             _bottomBorder.BirdCollided += SelfDestroying;
         }
 
@@ -38,7 +39,7 @@ namespace MainScene.Bird
             if (_startDyingAnimation) Dying?.Invoke();
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             _bottomBorder.BirdCollided -= SelfDestroying;
         }

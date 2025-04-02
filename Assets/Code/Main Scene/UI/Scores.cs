@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using MainScene.Pipe;
 using TMPro;
-using UnityEngine;
 using MainScene.ThroughPipe;
 using MainScene.WindowOfLoose;
+using UnityEngine;
 
 namespace MainScene.UI
 {
@@ -14,35 +14,41 @@ namespace MainScene.UI
         public Action<int> SendCurrentScoreAction;
         public Action ScoreIsRound, AddPoint;
 
-        [SerializeField] private PipesFactory _pipesFactory;
         [SerializeField] private StoreButton _storeButton;
-        [SerializeField] private WindowOfLooseShower _windowOfLooseShower;
+        private PipesFactory _pipesFactory;
+        private WindowOfLooseShower _windowOfLooseShower;
         private List<ThroughPipeCollider> _throughPipeColliders;
         private TMP_Text _scoreText;
         private int _scoreNumberWithEffect, _currentScore;
-        
 
-        private void OnEnable()
+
+        public void Constructor(PipesFactory pipesFactory)
         {
-            _throughPipeColliders = new List<ThroughPipeCollider>();
+            _pipesFactory = pipesFactory;
 
-            _pipesFactory       .BottomPipeCreated += AddThroughPipeCollider;
-            _storeButton        .StoreOpened       += SendCurrentScore;
-            _windowOfLooseShower.SendScore         += SendCurrentScore;
-        }
-        
-        private void Start()
-        {
-            _scoreText = GetComponent<TMP_Text>();
-
+            _pipesFactory.BottomPipeCreated += AddThroughPipeCollider;
+            
             _scoreNumberWithEffect = _pipesFactory.PipeNumberWithEffect;
+            
+            _throughPipeColliders = new List<ThroughPipeCollider>();
+            
+            _storeButton.StoreOpened += SendCurrentScore;
+            _scoreText = GetComponent<TMP_Text>();
             _currentScore = 0;
             _scoreText.text = _currentScore.ToString();
         }
-
+        
+        public void Constructor(WindowOfLooseShower windowOfLooseShower)
+        {
+            _windowOfLooseShower = windowOfLooseShower;
+            
+            _windowOfLooseShower.SendScore += SendCurrentScore;
+        }
+        
         private void AddThroughPipeCollider(ThroughPipeCollider throughPipeCollider)
         {
             throughPipeCollider.ThroughPipeColliderAction += ChangeScore;
+
             _throughPipeColliders.Add(throughPipeCollider);
         }
 
@@ -57,16 +63,13 @@ namespace MainScene.UI
         {
             SendCurrentScoreAction?.Invoke(_currentScore);
         }
-        
-        private void OnDisable()
-        {
-            _pipesFactory       .BottomPipeCreated -= AddThroughPipeCollider;
-            _storeButton        .StoreOpened       -= SendCurrentScore;
-            _windowOfLooseShower.SendScore         -= SendCurrentScore;
-        }
 
         private void OnDestroy()
         {
+            _storeButton        .StoreOpened       -= SendCurrentScore;
+            _pipesFactory       .BottomPipeCreated -= AddThroughPipeCollider;
+            _windowOfLooseShower.SendScore         -= SendCurrentScore;
+
             foreach (ThroughPipeCollider throughPipeCollider in _throughPipeColliders)
             {
                 throughPipeCollider.ThroughPipeColliderAction -= ChangeScore;

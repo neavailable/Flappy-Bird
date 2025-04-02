@@ -1,6 +1,6 @@
-using UnityEngine;
 using System;
 using MainScene.Bird;
+using UnityEngine;
 
 namespace MainScene.ThroughPipe
 {

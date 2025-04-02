@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace MainScene.Ground
 {
     [RequireComponent(typeof(GroundFactory))]

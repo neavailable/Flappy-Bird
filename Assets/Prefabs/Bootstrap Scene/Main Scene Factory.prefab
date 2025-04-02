@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6779178885221898933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6887107649318713740}
+  - component: {fileID: 1809276688779974393}
+  - component: {fileID: 8757629149999047530}
+  m_Layer: 0
+  m_Name: Main Scene Factory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6887107649318713740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779178885221898933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6020287, y: 3.4129345, z: -0.02209181}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809276688779974393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779178885221898933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcbd026e14b3d84ca7ce537453a275a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainScene: {fileID: 102900000, guid: a035c9553ece1a04a8851e19c315adb7, type: 3}
+  _birdPrefab: {fileID: 5622212244086544431, guid: bd4f1ba36c9a41a47b434af89fe3e89c, type: 3}
+  _groundFactoryPrefab: {fileID: 7303102355309365736, guid: 1c5ae54dd9b2458499c3b8631e7057ec, type: 3}
+  _groundDestroyerPrefab: {fileID: 456498394662332416, guid: f7f9ed8357dbc0c4499d56cd1c98da33, type: 3}
+  _topPipePrefab: {fileID: 366064330863284121, guid: db91d8ec30b8ee34bad56e1b770f5ce7, type: 3}
+  _pipeWithColliderPrefab: {fileID: 102683884009273835, guid: da46539e92a580149825a9b14b55c7fb, type: 3}
+  _pipeWithEffectPrefab: {fileID: 830353809140409105, guid: 2859c1be58954a941983ddc623f133e9, type: 3}
+  _pipesFactoryPrefab: {fileID: 5561261600159127766, guid: 0791c0ba7d01ae242bfc1498e6a3c8de, type: 3}
+  _pipeDestroyerPrefab: {fileID: 5805026523890915011, guid: 8e53259d7d57c3846a348a6793a37c3b, type: 3}
+  _bottomBorder: {fileID: 5669477932128174869, guid: 40af00af9e30af047bb4708d1a9a8586, type: 3}
+  _topBorder: {fileID: 3620536327204185546, guid: 6a05c7621ce7472439067ff03a418a58, type: 3}
+  _backgroundPrefab: {fileID: 7341300681061530315, guid: f92266a9a73744140b0842ba839f8212, type: 3}
+  _windEffectPrefab: {fileID: 4759985587091091071, guid: 194c03c44bb9c2a4f8a0ab081c7a536f, type: 3}
+  _standardUIPrefab: {fileID: 8841071177682896704, guid: fd1c1c756d9b7904c998a296b29073aa, type: 3}
+  _storePrefab: {fileID: 35246875159760602, guid: 12235344984888b4e8e862362113bbcb, type: 3}
+  _windowOfLoosePrefab: {fileID: 6077861354340254614, guid: 624b452dccda45d4baefc0c71005cdef, type: 3}
+  _windowOfLooseShower: {fileID: 80534097122166965, guid: 594feca34414fd04d94e254541e09398, type: 3}
+  _currentScorePrefab: {fileID: 4112393636253353431, guid: dc560f3affaf9c845871ff9e3d8993fd, type: 3}
+  _bestScoreCounterPrefab: {fileID: 6180065950715528445, guid: 322ef32482cabb54daf88d100e999f11, type: 3}
+  _eventSystemPrefab: {fileID: 1971773640743042507, guid: 300d9a3d2f645e34cb0c8e8c84fed1c0, type: 3}
+  _sceneLoader: {fileID: 0}
+--- !u!114 &8757629149999047530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779178885221898933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbeaee6469a9ce248b1b5fb8334fabea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
