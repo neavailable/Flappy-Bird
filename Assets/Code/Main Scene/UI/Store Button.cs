@@ -8,8 +8,8 @@ namespace MainScene.UI
     {
         public Action StoreOpened;
         
-        [SerializeField] private GameObject _store;
         [SerializeField] private List<GameObject> _hiddeObjects;
+        private GameObject _store;
         private bool _shouldShowStore;
 
 

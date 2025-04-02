@@ -7,7 +7,7 @@ namespace MainScene.Bird
     {
         public Action StartedDying, Dying, SelfDestroy;
         
-        [SerializeField] private Ground.BirdDestroyer _bottomBorder;
+        private Ground.BirdDestroyer _bottomBorder;
         private bool _startDyingAnimation;
 
 

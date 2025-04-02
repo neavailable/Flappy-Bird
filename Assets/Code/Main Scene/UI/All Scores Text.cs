@@ -6,9 +6,7 @@ namespace MainScene.UI
     [RequireComponent(typeof(TMP_Text))]
     public class AllScoresText : MonoBehaviour
     {
-        // -----
-        [SerializeField] private CurrentScore _currentScore;
-        // -----
+        private CurrentScore _currentScore;
         private TMP_Text _allScoresText;
 
         

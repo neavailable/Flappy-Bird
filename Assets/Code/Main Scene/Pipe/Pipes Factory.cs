@@ -21,10 +21,8 @@ namespace MainScene.Pipe
         [SerializeField] private GameObject _pipeWithEffect, _pipeWithCollider;
         [Header("Top Pipe Prefab")]
         [SerializeField] private GameObject _topPipe, _throughPipeEffectPrefab;
-        // -----
-        [SerializeField] private BirdDying _birdDying;
-        [SerializeField] private Scores _scores;
-        // -----
+        private BirdDying _birdDying;
+        private Scores _scores;
         private AllPipesSkinsManager _allPipesSkinsManager;
         [Range(5, 15), SerializeField] private int _pipeNumberWithEffect;
         private List<ObjectCollider> _pipesColliders;

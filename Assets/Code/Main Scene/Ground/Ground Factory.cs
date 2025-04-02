@@ -10,9 +10,8 @@ namespace MainScene.Ground
         public Func<Vector2> LocateGround;
 
         [SerializeField] private GameObject _groundPrefab;
-        // ---- 
-        [SerializeField] private Bird.BirdDying _birdDying;
-        // ---- 
+        private Bird.BirdDying _birdDying;
+        
         private GroundCreatorCollider _groundCreatorCollider;
 
         

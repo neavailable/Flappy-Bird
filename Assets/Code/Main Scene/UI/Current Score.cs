@@ -8,10 +8,8 @@ namespace MainScene.UI
         public Action ChangeAllScores;
         public int CurentScore => _curentScore;
         
-        // -----
-        [SerializeField] private Store.Store _store;
-        [SerializeField] private Scores _scores;
-        // -----
+        private Store.Store _store;
+        private Scores _scores;
         private int _curentScore;
 
 

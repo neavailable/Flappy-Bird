@@ -8,9 +8,9 @@ namespace MainScene.WindowOfLoose
     {
         public Action SendScore;
         
-        [SerializeField] private Bird.BirdDying _birdDying;
-        [SerializeField] private GameObject _windowOfLoose;
-        [SerializeField] private List<GameObject> _objectsToHide;
+        private Bird.BirdDying _birdDying;
+        private GameObject _windowOfLoose;
+        private List<GameObject> _objectsToHide;
 
 
         public void Constructor

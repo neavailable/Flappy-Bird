@@ -8,7 +8,7 @@ namespace MainScene.WindowOfLoose
     [RequireComponent(typeof(TMP_Text))]
     public class ScoreText : MonoBehaviour
     {   
-        [SerializeField] private Scores _scores;
+        private Scores _scores;
         private const string _defaultText = "Score\n";
         private TMP_Text _text;
 
