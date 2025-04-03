@@ -8,6 +8,7 @@ namespace MainScene.Bird
     [RequireComponent(typeof(Animator), typeof(BirdInput), typeof(BirdSkinsManager))]
     public class BirdAnimations : MonoBehaviour
     {
+        private const string _flyAnimationName = "Fly";
         private Animator _animator;
         private BirdSkinsManager _birdSkinsManager;
         private BirdInput _birdInput;
@@ -29,7 +30,7 @@ namespace MainScene.Bird
 
         private void PlayFlyAnimation(bool _)
         {
-            _animator.Play("Fly");
+            _animator.Play(_flyAnimationName);
         }
 
         private void ChangeAnimatorController(AnimatorController _animatorController)

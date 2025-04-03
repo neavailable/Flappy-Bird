@@ -1,7 +1,6 @@
 using UnityEditor;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Scenes
 {

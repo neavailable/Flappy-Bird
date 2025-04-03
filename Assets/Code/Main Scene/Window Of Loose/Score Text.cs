@@ -1,6 +1,5 @@
 using TMPro;
 using MainScene.UI;
-using System;
 using UnityEngine;
 
 namespace MainScene.WindowOfLoose
