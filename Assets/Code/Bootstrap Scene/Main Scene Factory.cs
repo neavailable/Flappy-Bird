@@ -56,7 +56,7 @@ namespace BootstrapScene
             (
                 prefab, 
                 prefab.transform.position,
-                Quaternion.identity
+                prefab.transform.rotation
             );
         }
         
